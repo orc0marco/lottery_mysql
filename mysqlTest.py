@@ -9,7 +9,7 @@ import requests
 
 
 # 打开数据库连接
-db = pymysql.connect("server.ip", "root", "123456", "lottery_activity")
+db = pymysql.connect("wwt.cggll8by8tsn.ap-northeast-1.rds.amazonaws.com", "wwt", "wwt110110", "lottery_activity")
 cursor = db.cursor()
 
 for num in range(1, 1672):
