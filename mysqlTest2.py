@@ -6,12 +6,12 @@ import pymysql
 
 
 # 打开数据库连接
-db = pymysql.connect("wwt.cggll8by8tsn.ap-northeast-1.rds.amazonaws.com", "wwt", "wwt110110", "lottery_user")
+db = pymysql.connect("wwt.cggll8by8tsn.ap-northeast-1.rds.amazonaws.com", "wwt", "wwt110110", "lottery_wallet")
 cursor = db.cursor()
 
 csv_reader = csv.reader(open("test.csv"))
 for row in csv_reader:
-    cursor.execute("select id from user where username = %s", row[0])
+    cursor.execute("select id from user where lottery_user.username = %s", row[0])
     results = cursor.fetchall()
     print(results['id'])
 
