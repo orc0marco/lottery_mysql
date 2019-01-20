@@ -6,7 +6,7 @@ import pymysql
 
 
 # 打开数据库连接
-db = pymysql.connect("wwt.cggll8by8tsn.ap-northeast-1.rds.amazonaws.com", "wwt", "wwt110110", "lottery_wallet")
+db = pymysql.connect("wwt.cggll8by8tsn.ap-northeast-1.rds.amazonaws.com", "wwt", "wwt110110", "lottery_user")
 cursor = db.cursor()
 
 csv_reader = csv.reader(open("test.csv"))
