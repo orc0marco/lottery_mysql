@@ -11,7 +11,7 @@ cursor = db.cursor()
 
 csv_reader = csv.reader(open("test.csv"))
 for row in csv_reader:
-    cursor.execute("select id from user where username = ?", str[row[0]])
+    cursor.execute("select id from user where username = %s", str[row[0]])
     results = cursor.fetchall()
     print(results)
 
